@@ -13,3 +13,5 @@ Cargo.lock
 
 .aptos
 .move
+
+build
