@@ -8,7 +8,7 @@ aptos account fund-with-faucet --account default
 
 ### Compile
 ```shell
-aptos move compile --named-addresses hello_blockchain=defaul
+aptos move compile --named-addresses hello_blockchain=default
 ```
 
 ### Test
