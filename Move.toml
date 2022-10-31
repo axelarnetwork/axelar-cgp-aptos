@@ -3,7 +3,7 @@ name = "axelar-cgp-move"
 version = "1.0.0"
 
 [addresses]
-axelar_gateway = "_"
+axelar = "_"
 message_receiver = "0x123"
 
 [dependencies]
