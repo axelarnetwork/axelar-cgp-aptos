@@ -1,4 +1,4 @@
-# Axelar cross-chain gateway protocol move implementation
+# Axelar cross-chain gateway protocol Aptos implementation
 
 ## Getting started
 #### Installing rust and move-cli (optional, macOS)

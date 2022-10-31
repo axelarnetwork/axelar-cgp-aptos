@@ -1,5 +1,5 @@
 [package]
-name = "axelar-cgp-move"
+name = "axelar-cgp-aptos"
 version = "1.0.0"
 
 [addresses]
