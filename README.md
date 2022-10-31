@@ -21,10 +21,10 @@ aptos account fund-with-faucet --account default
 ## Local development
 ### Compile
 ```shell
-aptos move compile --named-addresses hello_blockchain=default
+aptos move compile --named-addresses axelar=default
 ```
 
 ### Test
 ```shell
-aptos move test --named-addresses hello_blockchain=default
+aptos move test --named-addresses axelar=default
 ```
