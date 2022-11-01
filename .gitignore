@@ -15,3 +15,5 @@ Cargo.lock
 .move
 
 build
+
+node_modules

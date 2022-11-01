@@ -4,7 +4,7 @@ version = "1.0.0"
 
 [addresses]
 axelar = "_"
-message_receiver = "0x123"
+executable = "0x123"
 
 [dependencies]
 AptosFramework = { git = "git@github.com:aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework", rev = "7195a33f51849e7e3d23a652bb3fa3241e77f04a" }

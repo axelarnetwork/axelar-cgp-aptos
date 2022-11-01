@@ -3,19 +3,19 @@ module axelar::executable_registry {
 
     friend axelar::gateway;
 
-    struct ExecutableCapability has store {
-        destinationAddress: address
+    struct ExecuteCapability has store {
+        address: address
     }
 
-    public (friend) fun register_executable(account: &signer): ExecutableCapability {
-        ExecutableCapability{ destinationAddress: signer::address_of(account) }
+    public (friend) fun register_executable(account: &signer): ExecuteCapability {
+        ExecuteCapability{ address: signer::address_of(account) }
     }
 
-    public fun destroy_executable(executable: ExecutableCapability) {
-        ExecutableCapability {destinationAddress: _} = executable;
+    public fun destroy_execute_capability(contract: ExecuteCapability) {
+        ExecuteCapability {address: _} = contract;
     }
 
-    public fun address_of(executable: &mut ExecutableCapability): address {
-        executable.destinationAddress
+    public fun address_of(contract: &mut ExecuteCapability): address {
+        contract.address
     }
 }
