@@ -6,7 +6,7 @@
       "test": "jest",
       "build-aptos": "./aptos/build.sh",
       "build": "run-s build-aptos",
-      "prepare": "run-s build",
+      "postinstall": "run-s build",
       "lint": "eslint 'test/**/*.js'",
       "prettier": "prettier --write 'test/**/*.js' 'src/**/*.ts'"
   },
