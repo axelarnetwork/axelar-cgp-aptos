@@ -4,9 +4,8 @@
   "description": "",
   "scripts": {
       "test": "jest",
-      "build-ts": "rm -rf dist && tsc",
       "build-aptos": "./aptos/build.sh",
-      "build": "run-s build-aptos build-ts",
+      "build": "run-s build-aptos",
       "prepare": "run-s build",
       "lint": "eslint 'test/**/*.js'",
       "prettier": "prettier --write 'test/**/*.js' 'src/**/*.ts'"
