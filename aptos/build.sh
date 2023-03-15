@@ -6,5 +6,5 @@ then
     exit
 fi
 
-aptos move compile --save-metadata --package-dir aptos/modules/axelar
-aptos move compile --save-metadata --package-dir aptos/modules/test
+aptos move compile --save-metadata --bytecode-version 6 --package-dir aptos/modules/axelar
+aptos move compile --save-metadata --bytecode-version 6 --package-dir aptos/modules/test
