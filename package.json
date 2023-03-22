@@ -2,8 +2,5 @@
   "name": "@axelar-network/axelar-cgp-aptos",
   "version": "1.0.4",
   "description": "",
-  "scripts": {
-    "postinstall": "bash ./aptos/build.sh"
-  },
   "license": "ISC"
 }
