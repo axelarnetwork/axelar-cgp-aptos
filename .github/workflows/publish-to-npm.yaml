@@ -23,8 +23,13 @@ jobs:
           registry-url: "https://registry.npmjs.org"
       - name: Compile
         run: |
-          bash ./aptos/build.sh
-          ls
+          make compile
+      - name: Check published files
+        run: |
+          npm pack
+          tar -xzf axelar-network-axelar-cgp-aptos-1.0.4.tgz
+          tree package
+          rm -rf package axelar-network-axelar-cgp-aptos-1.0.4.tgz
       # - run: npm publish
       #   env:
       #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
