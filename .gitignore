@@ -10,12 +10,12 @@ Cargo.lock
 **/*.rs.bk
 
 .idea
-
 .aptos
 .move
 
+node_modules
+artifacts
 build
 
 node_modules
-.env
 artifacts
