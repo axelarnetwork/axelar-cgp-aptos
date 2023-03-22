@@ -24,6 +24,7 @@ jobs:
       - name: Compile
         run: |
           bash ./aptos/build.sh
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          ls
+      # - run: npm publish
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
