@@ -1,10 +1,10 @@
 {
   "name": "@axelar-network/axelar-cgp-aptos",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "scripts": {
     "test": "jest",
-    "build-aptos": "./aptos/build.sh",
+    "build-aptos": "bash ./aptos/build.sh",
     "build": "run-s build-aptos",
     "postinstall": "run-s build",
     "lint": "eslint 'test/**/*.js'",
