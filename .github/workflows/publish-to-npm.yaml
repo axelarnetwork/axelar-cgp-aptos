@@ -1,4 +1,4 @@
-name: 'publish to npm'
+name: "publish to npm"
 
 on:
   workflow_dispatch:
@@ -7,14 +7,29 @@ on:
 
 jobs:
   publish-to-npm:
-    name: 'Publish to NPM'
+    name: "Publish to NPM"
     runs-on: ubuntu-latest
     steps:
+      - name: Prerequisites
+        run: |
+          wget --no-check-certificate  https://github.com/aptos-labs/aptos-core/releases/download/aptos-cli-v1.0.4/aptos-cli-1.0.4-Ubuntu-22.04-x86_64.zip
+          unzip aptos-cli-1.0.4-Ubuntu-22.04-x86_64.zip
+          chmod +x aptos
+          cp aptos /usr/local/bin
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: '16.x'
-          registry-url: 'https://registry.npmjs.org'
+          node-version: "16.x"
+          registry-url: "https://registry.npmjs.org"
+      - name: Compile
+        run: |
+          make compile
+      # - name: Preview npm files
+      #   run: |
+      #     npm pack
+      #     tar -xzf axelar-network-axelar-cgp-aptos-1.0.4.tgz
+      #     tree package
+      #     rm -rf package axelar-network-axelar-cgp-aptos-1.0.4.tgz
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

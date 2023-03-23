@@ -1,0 +1,2 @@
+compile:
+		bash ./build.sh
